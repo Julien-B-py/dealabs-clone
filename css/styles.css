@@ -17,6 +17,10 @@ a {
     white-space: nowrap;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 article {
     display: flex;
     background-color: #fff;
@@ -38,6 +42,35 @@ h1:hover {
     cursor: pointer;
 }
 
+button {
+
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    color: #5a5d62;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: border-color .2s;
+}
+
+button:hover {
+    cursor: pointer;
+    border-color: #36b7cd;
+
+}
+
+/* ---------------- TITLE ---------------- */
+
+
+#title {
+    text-align: center;
+    margin: 3rem auto;
+    font-size: 2rem;
+}
+
+/* ---------------- ARTICLE ---------------- */
+/* ---------------- IMAGE LEFT ---------------- */
 
 .image {
     display: none;
@@ -54,45 +87,11 @@ h1:hover {
     display: block;
 }
 
-button {
+/* ---------------- IMAGE OVERLAY ---------------- */
 
-    padding: 0.5rem 1rem;
-    background-color: #fff;
-    border: 1px solid #d1d5db;
-    border-radius: 5px;
-    color: #5a5d62;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: border-color .2s;
+.triangle {
+    display: none;
 }
-
-
-
-button:hover {
-    cursor: pointer;
-    border-color: #36b7cd;
-
-}
-
-.view-deal {
-    background-color: #03a5c1;
-    border: none;
-    color: white;
-    transition: background-color .2s;
-}
-
-.view-deal:hover {
-    background-color: #36b7cd;
-}
-
-#title {
-    text-align: center;
-    margin: 3rem auto;
-    font-size: 2rem;
-}
-
-
-
 
 .fa-snowflake {
     font-size: 30px;
@@ -108,7 +107,7 @@ button:hover {
     z-index: 20;
 }
 
-
+/* ---------------- ARTICLE : RIGHT PART ---------------- */
 
 .content {
     display: flex;
@@ -121,6 +120,8 @@ button:hover {
     justify-content: space-between;
     gap: 0.25rem;
 }
+
+/* ---------------- ARTICLE CONTENT TOP ---------------- */
 
 .temperature {
     display: flex;
@@ -139,9 +140,6 @@ button:hover {
 .cold {
     color: #36b7cd;
 }
-
-
-
 
 .fa-minus {
     color: #36b7cd;
@@ -163,7 +161,6 @@ button:hover {
     transition: all .2s;
 }
 
-
 .fa-minus:hover {
     background-color: #36b7cd;
 }
@@ -173,14 +170,10 @@ button:hover {
     background-color: #e00034;
 }
 
-
-
-
 .vote:hover {
     cursor: pointer;
     color: white;
 }
-
 
 .date {
     display: flex;
@@ -190,10 +183,8 @@ button:hover {
     color: #8f949b;
 }
 
-.triangle {
-    display: none;
-}
 
+/* ---------------- ARTICLE CONTENT CENTER ---------------- */
 .center {
     display: flex;
     flex-direction: column;
@@ -239,6 +230,19 @@ button:hover {
     font-size: 0.875rem;
 }
 
+/* ---------------- ARTICLE CONTENT BOTTOM ---------------- */
+
+.bottom {
+    flex-direction: column;
+}
+
+.bottom-left {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    align-items: center;
+}
+
 .user {
     display: flex;
     align-items: center;
@@ -259,23 +263,10 @@ button:hover {
 
 }
 
-
 .user img {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-}
-
-
-.bottom {
-    flex-direction: column;
-}
-
-.bottom-left {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    align-items: center;
 }
 
 .links {
@@ -283,6 +274,18 @@ button:hover {
     gap: 0.25rem;
 }
 
+.view-deal {
+    background-color: #03a5c1;
+    border: none;
+    color: white;
+    transition: background-color .2s;
+}
+
+.view-deal:hover {
+    background-color: #36b7cd;
+}
+
+/* ---------------- LARGER SCREENS ---------------- */
 @media screen and (min-width: 900px) {
     .bottom {
         flex-direction: row;
@@ -306,7 +309,6 @@ button:hover {
         z-index: 1;
         content: "";
     }
-
 
     .center-left {
         display: none;
