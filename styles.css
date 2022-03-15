@@ -30,7 +30,7 @@ article {
 
 h1 {
     font-size: 1rem;
-
+    line-height: 1.3rem;
 }
 
 h1:hover {
@@ -63,16 +63,26 @@ button {
     color: #5a5d62;
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    transition: border-color .2s;
 }
 
-button:last-child {
-    background-color: #03a5c1;
-    border: none;
-    color: white;
-}
+
 
 button:hover {
     cursor: pointer;
+    border-color: #36b7cd;
+
+}
+
+.view-deal {
+    background-color: #03a5c1;
+    border: none;
+    color: white;
+    transition: background-color .2s;
+}
+
+.view-deal:hover {
+    background-color: #36b7cd;
 }
 
 #title {
@@ -80,6 +90,8 @@ button:hover {
     margin: 3rem auto;
     font-size: 2rem;
 }
+
+
 
 
 .fa-snowflake {
@@ -129,17 +141,46 @@ button:hover {
 }
 
 
+
+
 .fa-minus {
     color: #36b7cd;
 }
 
 .fa-plus {
     color: #e00034;
+
 }
 
-.fa-minus:hover, .fa-plus:hover {
-    cursor: pointer;
+.vote {
+    background-color: transparent;
+    padding: 0.25rem;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all .2s;
 }
+
+
+.fa-minus:hover {
+    background-color: #36b7cd;
+}
+
+
+.fa-plus:hover {
+    background-color: #e00034;
+}
+
+
+
+
+.vote:hover {
+    cursor: pointer;
+    color: white;
+}
+
 
 .date {
     display: flex;
@@ -178,6 +219,12 @@ button:hover {
     max-height: 100%;
 }
 
+.center-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
 .center-right>span {
     color: #e00034;
     font-weight: 700;
@@ -198,10 +245,18 @@ button:hover {
     gap: 0.25rem;
     font-size: 0.75rem;
     font-weight: 600;
+    height: max-content;
+    border: 1px solid transparent;
+    padding-right: 0.5rem;
+    transition: all .2s;
 }
 
 .user:hover {
     cursor: pointer;
+    color: #03a5c1;
+    border-color: #d1d5db;
+    border-radius: 999px;
+
 }
 
 
@@ -220,6 +275,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     flex: 1;
+    align-items: center;
 }
 
 .links {
